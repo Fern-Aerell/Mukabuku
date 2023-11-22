@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.jarak {
+    text-indent: 2rem;
+    text-align: justify;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 100%;
+    gap: 5rem;
+}
+
+p {
+    margin: 0;
+}

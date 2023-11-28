@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: max-content;
+    width: 15rem;
+}
+
+.profile-container > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-container > a {
+    background-color: gray;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    font-weight: bold;
+    width: max-content;
+    border-radius: 0.5rem;
+}
+
+.profile-container > a:hover {
+    background-color: darkgray;
+}
+
+.foto-profile {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.username {
+    font-size: 1.5rem;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    gap: 0.5rem;
+    height: 80vh;
+    width: 50vw;
+}
+
+.list-chat-container {
+    background-color: aliceblue;
+    border-radius: 0.5rem;
+    height: 100%;
+    overflow: scroll;
+}
+
+.chat {
+    background-color: white;
+    padding: 0.1rem 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    width: max-content;
+}
+
+.chat-username {
+    font-size: 1rem;
+}
+
+.isi-chat {
+    font-weight: bold;
+    color: rgb(94, 94, 94);
+}
+
+.form-chat {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.input-chat {
+    font-size: 1rem;
+    padding: 0rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.button-kirim {
+    background-color: rgb(236, 11, 56);
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}
+
+.button-kirim:hover {
+    cursor: pointer;
+    background-color: rgb(198, 10, 47);
+}

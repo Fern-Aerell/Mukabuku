@@ -49,6 +49,29 @@ class Database {
         return false;
     }
 
+    public function getAkunUsername($email, $pass): string {
+        $query = "SELECT * FROM akun WHERE email = :email AND pass = :pass";
+        $stmt = $this->pdo->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':pass', $pass);
+
+        $stmt->execute();
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $user["username"];
+    }
+
+    public function getChatGlobal() {
+        $query = "SELECT * FROM chat_global";
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute();
+
+        $chat_global = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $chat_global;
+    }
+
 }
 
 ?>

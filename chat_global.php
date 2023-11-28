@@ -2,9 +2,23 @@
 
 require_once "database.php";
 
+session_start();
+
+if(isset($_GET["logout"]))
+{
+	session_destroy();
+	header("Location: login.php");
+}
+
 if(!isset($_SESSION["user"]) || $_SESSION["user"] == null) {
-    var_dump($_SESSION["user"]);
-    // header("Location: ".$_ENV["BASE_URL"]."/index.php");
+	header("Location: login.php");
+}
+
+if(isset($_POST["chat"]) && !empty($_POST["chat"]))
+{
+	$query = "INSERT INTO chat_global (username, isi_chat) values('".$_SESSION["user"]["username"]."','".$_POST["chat"]."');";
+        $stmt = $db->prepare($query);
+        $stmt->execute();
 }
 
 ?>

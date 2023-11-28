@@ -1,2 +1,0 @@
-email : admin@aerell.com
-pw : admin123

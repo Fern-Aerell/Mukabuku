@@ -1,0 +1,8 @@
+Email : fern@gmail.com
+Password : fern12345
+
+Email : eric@gmail.com
+Password : eric12345
+
+Email : niko@gmail.com
+Password : niko12345

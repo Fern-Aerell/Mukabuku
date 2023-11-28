@@ -14,11 +14,11 @@ if(!isset($_SESSION["user"]) || $_SESSION["user"] == null) {
 	header("Location: login.php");
 }
 
-if(isset($_POST["chat"]) && !empty($_POST["chat"]))
+if(isset($_SESSION["user"]) && $_SESSION["user"] != null && isset($_POST["chat"]) && !empty($_POST["chat"]))
 {
 	$query = "INSERT INTO chat_global (username, isi_chat) values('".$_SESSION["user"]["username"]."','".$_POST["chat"]."');";
-        $stmt = $db->prepare($query);
-        $stmt->execute();
+    $stmt = $db->prepare($query);
+    $stmt->execute();
 }
 
 ?>
@@ -36,23 +36,19 @@ if(isset($_POST["chat"]) && !empty($_POST["chat"]))
         <div class="profile-container">
             <div>
                 <img class="foto-profile" src="assets/images/profile.png" alt="foto profile">
-                <h1 class="username">Fern Aerell</h1>
+                <h1 class="username"><?= $_SESSION["user"]["username"] ?></h1>
             </div>
             <a href="?logout=true">Logout</a>
         </div>
         <div class="chat-container">
-            <div class="list-chat-container">
-                <div class="chat">
-                    <h1 class="chat-username">Fern Aerell</h1>
-                    <p class="isi-chat">Halo</p>
-                </div>
-            </div>
+            <div class="list-chat-container"></div>
             <form class="form-chat" action="" method="post">
                 <input class="input-chat" type="text" name="chat" id="chat" placeholder="Masukkan Pesan...">
                 <button class="button-kirim" type="submit">Kirim</button>
             </form>
         </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="assets/javascripts/chat_global.js"></script>
 </body>
 </html>

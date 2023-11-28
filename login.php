@@ -36,6 +36,18 @@
     <div class="login-box-container animate__animated animate__jackInTheBox">
         <form action="" method="post">
             <p id="message" class="animate__animated animate__shakeX"></p>
+            <input type="email" name="email" id="email" placeholder="Email address">
+            <input type="password" name="pass" id="pass" placeholder="Password">
+            <button class="login-button" type="submit">Log In</button>
+            <a href="" onclick="fiturbelumtersedia()">Forgotten password?</a>
+        </form>
+        <hr>
+        <button onclick="fiturbelumtersedia()" class="create-new-button">Create new account</button>
+    </div>
+    <script src="assets/javascripts/login.js"></script>
+</body>
+
+</html>
 
 <?php
 
@@ -66,16 +78,3 @@ if(isset($email) && isset($pass)) {
 }
 
 ?>
-
-            <input type="email" name="email" id="email" placeholder="Email address">
-            <input type="password" name="pass" id="pass" placeholder="Password">
-            <button class="login-button" type="submit">Log In</button>
-            <a href="" onclick="fiturbelumtersedia()">Forgotten password?</a>
-        </form>
-        <hr>
-        <button onclick="fiturbelumtersedia()" class="create-new-button">Create new account</button>
-    </div>
-    <script src="assets/javascripts/login.js"></script>
-</body>
-
-</html>
